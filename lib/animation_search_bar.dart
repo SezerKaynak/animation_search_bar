@@ -286,10 +286,12 @@ class KBackButton extends StatelessWidget {
                 onTap: () async {
                   previousScreen == null
                       ? Navigator.pop(context)
-                      : Navigator.pushReplacement(
+                      : Navigator.pushAndRemoveUntil(
                           context,
-                          CupertinoPageRoute(
-                              builder: (context) => previousScreen!));
+                          MaterialPageRoute(
+                              builder: (context) => previousScreen!),
+                              ModalRoute.withName("/Task"));
+
                 },
                 child: Padding(
                     padding: const EdgeInsets.all(3),
