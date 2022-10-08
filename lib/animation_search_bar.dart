@@ -23,6 +23,7 @@ class AnimationSearchBar extends StatelessWidget {
     this.textStyle,
     this.hintText,
     this.hintStyle,
+    this.tag,
     required this.onChanged,
     required this.searchTextEditingController,
     this.horizontalPadding,
@@ -51,6 +52,7 @@ class AnimationSearchBar extends StatelessWidget {
   final TextStyle? textStyle;
   final TextStyle? hintStyle;
   final Decoration? searchFieldDecoration;
+  final String? tag;
   late Duration? duration;
   final TextEditingController searchTextEditingController;
   final Function(String) onChanged;
